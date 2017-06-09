@@ -8,6 +8,6 @@ script:
   - npm test
 deploy:
   - provider: script
-    script: npm run deploy -- --stage prod
+    script: serverless deploy --stage prod
     on:
       branch: master

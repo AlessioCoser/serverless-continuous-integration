@@ -4,8 +4,7 @@
   "description": "Simple setup example for a Serverless project with a Continuous Deployment",
   "main": "greetings.js",
   "scripts": {
-    "test": "echo \"Your tests here\" && exit 0",
-    "deploy": "serverless deploy"
+    "test": "echo \"Your tests here\" && exit 0"
   },
   "repository": {
     "type": "git",
