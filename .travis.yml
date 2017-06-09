@@ -3,6 +3,7 @@ node_js:
 - 6.0
 before_script:
   - npm install
+  - npm install serverless -g
 script:
   - npm test
 deploy:
