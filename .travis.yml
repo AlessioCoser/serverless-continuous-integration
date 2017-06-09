@@ -11,3 +11,7 @@ deploy:
     script: serverless deploy --stage prod
     on:
       branch: master
+  - provider: script
+    script: serverless deploy --stage dev
+    on:
+      branch: develop
