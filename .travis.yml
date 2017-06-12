@@ -5,9 +5,9 @@ before_script:
   - npm install
   - npm install serverless -g
 script:
-  - npm test:unit
-  - npm test:integration
-  - npm test:acceptance
+  - npm run test:unit
+  - npm run test:integration
+  - npm run test:acceptance
   - npm run tag:success
 deploy:
   - provider: script
