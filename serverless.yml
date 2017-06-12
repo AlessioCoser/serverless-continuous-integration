@@ -1,8 +1,7 @@
 service: serverless-continuous-integration
 
 custom:
-  environment: ${file(./serverless-env.yml)}
-  env_params: ${self:custom.environment.${opt:stage}}
+  env_params: ${file(./serverless-env.yml).${opt:stage}}
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"
