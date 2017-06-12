@@ -4,10 +4,10 @@
   "description": "Simple setup example for a Serverless project with a Continuous Deployment",
   "main": "greetings.js",
   "scripts": {
+    "test": "npm run test:unit && npm run test:integration && npm run test:acceptance",
     "test:unit": "echo \"Your unit tests here\" && exit 0",
     "test:integration": "echo \"Your integration tests here\" && exit 0",
-    "test:acceptance": "echo \"Your acceptance tests here\" && exit 0",
-    "tag:success": "git tag release-candidate-$TRAVIS_BUILD_ID $TRAVIS_COMMIT && git push --tags origin $TRAVIS_BRANCH"
+    "test:acceptance": "echo \"Your acceptance tests here\" && exit 0"
   },
   "repository": {
     "type": "git",

@@ -10,6 +10,7 @@ provider:
 functions:
   greetings:
     handler: greetings.handler
+    description: Deployed version ${opt:commit}
     environment: ${self:custom.env_params}
     events:
       - http:

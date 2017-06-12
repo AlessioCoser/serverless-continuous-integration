@@ -1,20 +1,15 @@
 language: node_js
-node_js:
-- 6.0
-before_script:
-  - npm install
-  - npm install serverless -g
-script:
-  - npm run test:unit
-  - npm run test:integration
-  - npm run test:acceptance
-  - npm run tag:success
+node_js: 6.10
+before_install: npm install serverless -g
+
 deploy:
   - provider: script
-    script: serverless deploy --stage prod
+    skip_cleanup: true
+    script: serverless deploy --stage prod --commit $TRAVIS_COMMIT
     on:
       branch: master
   - provider: script
-    script: serverless deploy --stage staging
+    skip_cleanup: true
+    script: serverless deploy --stage staging --commit $TRAVIS_COMMIT
     on:
       branch: staging
