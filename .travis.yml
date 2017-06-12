@@ -5,13 +5,16 @@ before_script:
   - npm install
   - npm install serverless -g
 script:
-  - npm test
+  - npm test:unit
+  - npm test:integration
+  - npm test:acceptance
+  - npm run tag:success
 deploy:
   - provider: script
     script: serverless deploy --stage prod
     on:
       branch: master
   - provider: script
-    script: serverless deploy --stage dev
+    script: serverless deploy --stage staging
     on:
-      branch: develop
+      branch: staging

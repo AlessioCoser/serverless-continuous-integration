@@ -1,4 +1,4 @@
-# serverless-continuous-deployment
+# serverless-continuous-integration
 [![Build Status](https://travis-ci.org/AlessioCoser/serverless-continuous-integration.svg?branch=master)](https://travis-ci.org/AlessioCoser/serverless-continuous-integration)
 
 Simple setup example for a Serverless project with a Continuous Deployment
